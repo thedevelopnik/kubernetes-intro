@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pingpong
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: pingpong
+    spec:
+      containers:
+      - name: pingpong
+        image: gospotcheck/go-docker-example
+        ports:
+        - containerPort: 8080
