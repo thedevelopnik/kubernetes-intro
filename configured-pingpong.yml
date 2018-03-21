@@ -13,7 +13,7 @@ spec:
       - name: pingpong
         image: gospotcheck/go-docker-example
         ports:
-        - containerPort: 8080
+        - containerPort: 8000
         env:
         - name: PORT
           valueFrom:

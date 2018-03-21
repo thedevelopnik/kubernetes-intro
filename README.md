@@ -94,11 +94,11 @@ There is a pingpong-config.yml file we'll use:
 
 `$ kubectl create -f pingpong-config.yml`
 
-Now let's make our pingpong and pingpong-svc files look like the configured-* files, and rollout the changes:
+Now let's make our pingpong and pingpong-svc files look like the configured-* files, and apply the changes:
 
-`$ kubectl rollout -f pingpong.yml`
+`$ kubectl apply -f pingpong.yml`
 
-`$ kubectl rollout -f pingpong-svc.yml`
+We can also update in the console. Go into the dashboard, go to Services, click on the pingpong-service, then Edit, and we can change the port to 8000.
 
 And check to make sure it works:
 
