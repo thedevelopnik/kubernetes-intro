@@ -22,7 +22,7 @@ Click on `Deploy a Containerized App`.
 * image: `nginx:1.13.9-alpine`
 * count: 3
 * no service
-* labels: 1app:webserver`
+* labels: app:webserver`
 
 Deploy it and let's go look at the running workloads.
 
@@ -68,7 +68,7 @@ Now we're going to create a service to access the application:
 
 `$ kubectl get service` will tell us what services are running.
 
-`$ kubectl describe svc webserver-service` will get us details. That will get us the port to access.
+`$ kubectl describe service webserver-service` will get us details.
 
 We need the ip address of the cluster:
 

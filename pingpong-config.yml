@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: pingpong-config
 data:
-  PORT: 8000
+  PORT: "8000"
   
