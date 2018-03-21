@@ -80,9 +80,9 @@ And now we can access the service from that ip address, on the port from earlier
 
 First, let's deploy another app, called pingpong.
 
-`$ kubectl create -f pingpong.yml`
+`$ kubectl apply -f pingpong.yml`
 
-`$ kubectl create -f pingpong-svc.yml`
+`$ kubectl apply -f pingpong-svc.yml`
 
 This application's code sets a default port of `8080`, but then checks to see if there is a preferred port passed in via env variable.
 
@@ -94,11 +94,11 @@ There is a pingpong-config.yml file we'll use:
 
 `$ kubectl create -f pingpong-config.yml`
 
-Now let's make our pingpong and pingpong-svc files look like the configured-* files, and apply the changes:
+Now let's and apply some changes:
 
-`$ kubectl apply -f pingpong.yml`
+`$ kubectl apply -f configured-pingpong.yml`
 
-We can also update in the console. Go into the dashboard, go to Services, click on the pingpong-service, then Edit, and we can change the port to 8000.
+We can apply the service change, or we can also update in the console. Go into the dashboard, go to Services, click on the pingpong-service, then Edit, and we can change the port to 8000.
 
 And check to make sure it works:
 
