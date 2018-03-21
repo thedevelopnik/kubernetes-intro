@@ -84,6 +84,8 @@ First, let's deploy another app, called pingpong.
 
 `$ kubectl apply -f pingpong-svc.yml`
 
+We're using `apply` here because that causes Kubernetes to save the original configuration. We could also do `kubernetes create --save-config`. By saving the configuration internally it will be able to apply incremental updates, making it easier to keep our configuration as code.
+
 This application's code sets a default port of `8080`, but then checks to see if there is a preferred port passed in via env variable.
 
 We just ran it with the default port, so let's make sure we can curl it: `$ curl <minikube ip>:<port>/ping`
